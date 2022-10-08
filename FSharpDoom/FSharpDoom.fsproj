@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Rgba.fs" />
+        <Compile Include="Image.fs" />
+        <Compile Include="OpenGl\BufferObject.fs" />
+        <Compile Include="OpenGl\VertexArrayObject.fs" />
+        <Compile Include="OpenGl\Shader.fs" />
+        <Compile Include="OpenGl\Texture.fs" />
+        <Compile Include="OpenGl\SpriteRenderer.fs" />
+        <Content Include="Shaders\shader.vert">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Shaders\shader.frag">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Shaders\sprite.frag">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Shaders\sprite.vert">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Compile Include="Constants.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Silk.NET.Input" Version="2.16.0" />
+      <PackageReference Include="Silk.NET.OpenAL" Version="2.16.0" />
+      <PackageReference Include="Silk.NET.OpenGL" Version="2.16.0" />
+      <PackageReference Include="Silk.NET.Windowing" Version="2.16.0" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />
+      <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta13" />
+    </ItemGroup>
+
+</Project>

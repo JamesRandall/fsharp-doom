@@ -10,8 +10,9 @@ let renderDoomImage (x,y) scale (screen:FSharpDoom.Image.Image) (palette:Palette
     let column = sprite.Columns[spriteX]
     {0..sprite.Height-1}
     |> Seq.iter(fun spriteY ->
-      let colorIndex = column[spriteY]
-      if colorIndex > 0 then
+      match column[spriteY] with
+      | None -> ()
+      | Some colorIndex ->
         let color = palette.Colors[colorIndex]
         let screenX = spriteX*scale + x
         let screenY = spriteY*scale + y
@@ -22,6 +23,5 @@ let renderDoomImage (x,y) scale (screen:FSharpDoom.Image.Image) (palette:Palette
             NativePtr.set screenPtr (outY*screen.Width+outX) color
           )
         )
-        ()
     )
   )

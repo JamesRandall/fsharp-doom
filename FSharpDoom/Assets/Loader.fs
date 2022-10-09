@@ -16,7 +16,7 @@ type DoomImage =
     Height: int
     Left: int
     Top: int
-    Columns: int array array
+    Columns: (int option) array array
   }
   
 type Palette =
@@ -71,7 +71,7 @@ let loadDoomImage wad lump =
     columnIndexes
     |> Array.map(fun columnOffset ->
       // TODO: make this part of the fold - i.e. do not mutate the column array
-      let column = Array.create height Constants.transparent
+      let column = Array.create height None
       
       Seq.initInfinite id
       |> Seq.scan(fun (postOffset,shouldContinue) _ ->
@@ -82,7 +82,7 @@ let loadDoomImage wad lump =
           let postHeight = wad[postOffset+1] |> int
           {0..postHeight-1}
           |> Seq.iter(fun postIndex ->
-            column[row+postIndex] <- wad[postOffset+3+postIndex] |> int
+            column[row+postIndex] <- wad[postOffset+3+postIndex] |> int |> Some
           )
           // the offset moves on by the row byte, the height byte, a dummy byte before the pixels, a dummy byte after
           // the pixels and the number of pixels in the post (postHeight)

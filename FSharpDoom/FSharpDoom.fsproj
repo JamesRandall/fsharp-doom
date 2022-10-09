@@ -8,6 +8,7 @@
     <ItemGroup>
         <Compile Include="Rgba.fs" />
         <Compile Include="Image.fs" />
+        <Compile Include="Constants.fs" />
         <Compile Include="OpenGl\BufferObject.fs" />
         <Compile Include="OpenGl\VertexArrayObject.fs" />
         <Compile Include="OpenGl\Shader.fs" />
@@ -25,7 +26,11 @@
         <Content Include="Shaders\sprite.vert">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-        <Compile Include="Constants.fs" />
+        <Content Include="Assets\DOOM1.WAD">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Compile Include="Assets\Loader.fs" />
+        <Compile Include="RenderTest.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 

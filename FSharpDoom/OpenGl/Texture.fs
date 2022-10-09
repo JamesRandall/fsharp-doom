@@ -4,9 +4,6 @@ open System
 open FSharpDoom.Image
 open FSharpDoom.OpenGl.Rgba
 open Silk.NET.OpenGL
-//open SixLabors.ImageSharp
-//open SixLabors.ImageSharp.PixelFormats
-//open SixLabors.ImageSharp.Processing
 open Microsoft.FSharp.NativeInterop
 open SixLabors.ImageSharp.PixelFormats
 
@@ -24,7 +21,6 @@ let bindWithSlot (slot:TextureUnit) texture =
 let bind = bindWithSlot TextureUnit.Texture0
 
 let createWithImage (gl:GL) (img:Image) =
-  //img.Mutate(fun x -> x.Flip FlipMode.Vertical |> ignore)
   let width = img.Width |> uint
   let height = img.Height |> uint
   let handle = gl.GenTexture()

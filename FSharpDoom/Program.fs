@@ -20,10 +20,10 @@ let render (frameTime:double) =
   match renderDataOption with
   | Some rd ->
     let doomImage,palette = rd.TestSprite
-    RenderTest.renderDoomImage (100,100) 4 rd.ScreenImage palette doomImage
+    RenderTest.renderDoomImage (0,0) Constants.viewportZoom rd.ScreenImage palette doomImage
     
     let texture = OpenGl.Texture.createWithImage rd.Gl rd.ScreenImage
-    let vSpriteSize = System.Numerics.Vector2(rd.ScreenImage.Width |> float32, rd.ScreenImage.Height |> float32)
+    let vSpriteSize = System.Numerics.Vector2(Constants.windowWidth |> float32, Constants.windowHeight |> float32)
     rd.SpriteRenderer (Vector2(0.0f,0.0f)) vSpriteSize texture
     texture |> OpenGl.Texture.dispose
   | None ->
@@ -35,7 +35,7 @@ let load (window:IWindow) _ =
   let testSprite = Assets.Loader.load ()
   renderDataOption <- Some
     { Gl = gl
-      ScreenImage = Image.Create Constants.windowWidth Constants.windowHeight
+      ScreenImage = Image.Create Constants.viewportWidth Constants.viewportHeight
       SpriteRenderer = OpenGl.SpriteRenderer.create gl (float32 Constants.windowWidth) (float32 Constants.windowHeight)
       TestSprite = testSprite
     }

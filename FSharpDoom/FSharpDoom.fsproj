@@ -9,6 +9,7 @@
         <Compile Include="Rgba.fs" />
         <Compile Include="Image.fs" />
         <Compile Include="Constants.fs" />
+        <Compile Include="Timer.fs" />
         <Compile Include="OpenGl\BufferObject.fs" />
         <Compile Include="OpenGl\VertexArrayObject.fs" />
         <Compile Include="OpenGl\Shader.fs" />

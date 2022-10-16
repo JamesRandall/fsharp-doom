@@ -7,3 +7,11 @@ let zoom = 2
 let windowWidth = viewportWidth * zoom
 let windowHeight = viewportHeight * zoom
 let transparent = -1
+
+[<RequireQualifiedAccess>]
+type SkillLevel =
+  | ImTooYoungToDie
+  | HeyNotTooRough
+  | HurtMePlenty
+  | UltraViolence
+  | Nightmare

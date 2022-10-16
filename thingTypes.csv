@@ -1,0 +1,124 @@
+﻿Value,Version,Radius,Sprite,Sequence,Class,Description
+2023,R,20,PSTR,A,AP,Berserk
+2026,S,20,PMAP,ABCDCB,AP1,Computer map
+2014,S,20,BON1,ABCDCB,AP,Health potion
+2024,S,20,PINS,ABCD,AP,Invisibility
+2022,R,20,PINV,ABCD,AP,Invulnerability
+2045,S,20,PVIS,AB,AP,Light amplification visor
+83,2,20,MEGA,ABCD,AP,Megasphere
+2013,S,20,SOUL,ABCDCB,AP,Soul sphere
+2015,S,20,BON2,ABCDCB,AP,Spiritual armor
+8,S,20,BPAK,A,P,Backpack
+2019,S,20,ARM2,AB,P1,Blue armor
+2018,S,20,ARM1,AB,P2,Green armor
+2012,S,20,MEDI,A,P3,Medikit
+2025,S,20,SUIT,A,P,Radiation suit
+2011,S,20,STIM,A,P3,Stimpack
+2006,R,20,BFUG,A,WP1,BFG 9000
+2002,S,20,MGUN,A,WP1,Chaingun
+2005,S,20,CSAW,A,WP2,Chainsaw
+2004,R,20,PLAS,A,WP1,Plasma rifle
+2003,S,20,LAUN,A,WP1,Rocket launcher
+2001,S,20,SHOT,A,WP1,Shotgun
+82,2,20,SGN2,A,WP1,Super shotgun
+2007,S,20,CLIP,A,P1,Ammo clip
+2048,S,20,AMMO,A,P1,Box of ammo
+2046,S,20,BROK,A,P1,Box of rockets
+2049,S,20,SBOX,A,P1,Box of shells
+2047,R,20,CELL,A,P1,Cell charge
+17,R,20,CELP,A,P1,Cell charge pack
+2010,S,20,ROCK,A,P1,Rocket
+2008,S,20,SHEL,A,P1,Shotgun shells
+5,S,20,BKEY,AB,P,Blue keycard
+40,R,20,BSKU,AB,P,Blue skull key
+13,S,20,RKEY,AB,P,Red keycard
+38,R,20,RSKU,AB,P,Red skull key
+6,S,20,YKEY,AB,P,Yellow keycard
+39,R,20,YSKU,AB,P,Yellow skull key
+68,2,64,BSPI,+,MO,Arachnotron
+64,2,20,VILE,+,MO,Arch-vile
+3003,S,24,BOSS,+,MO,Baron of Hell
+3005,R,31,HEAD,+,MO^,Cacodemon
+65,2,20,CPOS,+,MO,Heavy Weapon Dude
+72,2,16,KEEN,A+,MO^,Commander Keen
+16,R,40,CYBR,+,MO,Cyberdemon
+3002,S,30,SARG,+,MO,Demon
+3004,S,20,POSS,+,MO,Zombieman
+9,S,20,SPOS,+,MO,Shotgun Guy
+69,2,24,BOS2,+,MO,Hell Knight
+3001,S,20,TROO,+,MO,Imp
+3006,R,16,SKUL,+,M1O^,Lost Soul
+67,2,48,FATT,+,MO,Mancubus
+71,2,31,PAIN,+,MO^,Pain Elemental
+66,2,20,SKEL,+,MO,Revenant
+58,S,30,SARG,+,MO,Spectre
+7,R,128,SPID,+,MO,Spider Mastermind
+84,2,20,SSWV,+,MO,Wolfenstein SS
+2035,S,10,BAR1,AB+,O,Barrel
+70,2,10,FCAN,ABC,O,Burning barrel
+43,R,16,TRE1,A,O,Burnt tree
+35,S,16,CBRA,A,O,Candelabra
+41,R,16,CEYE,ABCB,O,Evil eye
+28,R,16,POL2,A,O,"Five skulls ""shish kebab"""
+42,R,16,FSKU,ABC,O,Floating skull
+2028,S,16,COLU,A,O,Floor lamp
+53,R,16,GOR5,A,O^,Hanging leg
+52,R,16,GOR4,A,O^,Hanging pair of legs
+78,2,16,HDB6,A,O^,"Hanging torso, brain removed"
+75,2,16,HDB3,A,O^,"Hanging torso, looking down"
+77,2,16,HDB5,A,O^,"Hanging torso, looking up"
+76,2,16,HDB4,A,O^,"Hanging torso, open skull"
+50,R,16,GOR2,A,O^,"Hanging victim, arms out"
+74,2,16,HDB2,A,O^,"Hanging victim, guts and brain removed"
+73,2,16,HDB1,A,O^,"Hanging victim, guts removed"
+51,R,16,GOR3,A,O^,"Hanging victim, one-legged"
+49,R,16,GOR1,ABCB,O^,"Hanging victim, twitching"
+25,R,16,POL1,A,O,Impaled human
+54,R,32,TRE2,A,O,Large brown tree
+29,R,16,POL3,AB,O,Pile of skulls and candles
+55,R,16,SMBT,ABCD,O,Short blue firestick
+56,R,16,SMGT,ABCD,O,Short green firestick
+31,R,16,COL2,A,O,Short green pillar
+36,R,16,COL5,AB,O,Short green pillar with beating heart
+57,R,16,SMRT,ABCD,O,Short red firestick
+33,R,16,COL4,A,O,Short red pillar
+37,R,16,COL6,A,O,Short red pillar with skull
+86,2,16,TLP2,ABCD,O,Short techno floor lamp
+27,R,16,POL4,A,O,Skull on a pole
+47,R,16,SMIT,A,O,Stalagmite
+44,R,16,TBLU,ABCD,O,Tall blue firestick
+45,R,16,TGRN,ABCD,O,Tall green firestick
+30,R,16,COL1,A,O,Tall green pillar
+46,S,16,TRED,ABCD,O,Tall red firestick
+32,R,16,COL3,A,O,Tall red pillar
+85,2,16,TLMP,ABCD,O,Tall techno floor lamp
+48,S,16,ELEC,A,O,Tall techno pillar
+26,R,16,POL6,AB,O,Twitching impaled human
+10,S,16,PLAY,W,,Bloody mess
+12,S,16,PLAY,W,,Bloody mess
+34,S,16,CAND,A,,Candle
+22,R,31,HEAD,L,,Dead cacodemon
+21,S,30,SARG,N,,Dead demon
+18,S,20,POSS,L,,Dead former human
+19,S,20,SPOS,L,,Dead former sergeant
+20,S,20,TROO,M,,Dead imp
+23,R,16,SKUL,K,,Dead lost soul (invisible)
+15,S,16,PLAY,N,,Dead player
+62,R,16,GOR5,A,^,Hanging leg
+60,R,16,GOR4,A,^,Hanging pair of legs
+59,R,16,GOR2,A,^,"Hanging victim, arms out"
+61,R,16,GOR3,A,^,"Hanging victim, one-legged"
+63,R,16,GOR1,ABCB,^,"Hanging victim, twitching"
+79,2,16,POB1,A,,Pool of blood
+80,2,16,POB2,A,,Pool of blood
+24,S,16,POL5,A,,Pool of blood and flesh
+81,2,16,BRS1,A,,Pool of brains
+88,2,16,BBRN,+,O1,Boss Brain
+11,S,20,none,-,,Deathmatch start
+1,S,16,PLAY,+,,Player 1 start
+2,S,16,PLAY,+,,Player 2 start
+3,S,16,PLAY,+,,Player 3 start
+4,S,16,PLAY,+,,Player 4 start
+89,2,20,none2,-,,Spawn shooter
+87,2,0,none3,-,,Spawn spot
+14,S,20,none4,-,,Teleport landing

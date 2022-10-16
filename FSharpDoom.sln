@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpDoom", "FSharpDoom\FSharpDoom.fsproj", "{F45081D8-AE96-45FD-BE8D-44EAEB921105}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{41372A3A-7CAD-4547-88CB-F7C10A7A0BC6}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThingsFromCsv", "ThingsFromCsv\ThingsFromCsv.fsproj", "{C4654E17-B612-4E5F-8CB9-FCCA04AAC833}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,12 @@ Global
 		{F45081D8-AE96-45FD-BE8D-44EAEB921105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F45081D8-AE96-45FD-BE8D-44EAEB921105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F45081D8-AE96-45FD-BE8D-44EAEB921105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4654E17-B612-4E5F-8CB9-FCCA04AAC833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4654E17-B612-4E5F-8CB9-FCCA04AAC833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4654E17-B612-4E5F-8CB9-FCCA04AAC833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4654E17-B612-4E5F-8CB9-FCCA04AAC833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4654E17-B612-4E5F-8CB9-FCCA04AAC833} = {41372A3A-7CAD-4547-88CB-F7C10A7A0BC6}
 	EndGlobalSection
 EndGlobal

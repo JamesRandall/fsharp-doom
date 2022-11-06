@@ -326,4 +326,4 @@ let load skillLevel (wad:byte array) (lump:LumpEntry) =
       IsDeaf = (flags &&& isDeafBit) > 0s
     }
   )
-  |> Seq.toList
+  |> Seq.toArray

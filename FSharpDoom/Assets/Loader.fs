@@ -16,7 +16,12 @@ type DoomImage =
 type Palette =
   { Colors: Rgba array }
 
-
+type Level =
+  { Episode: int
+    MapNumber: int
+    Things: Assets.Thing.Thing array
+    Map: Assets.Map.Map
+  }
 
 let loadPalettes (wad:byte array) lump =
   let paletteEntries = 256
@@ -119,11 +124,17 @@ let load () =
   
   (titlePic,palettes[0])
   
-let loadMap episode level =
+let loadLevel episode level =
   let wad,lumps = loadWadAndLumps ()
   let mapLumpName = $"E{episode}M{level}"
   let mapStartIndex = lumps |> Array.findIndex(fun l -> l.Name = mapLumpName)
   let numberOfLumpsInMap = 10
   let mapLumps = lumps[mapStartIndex+1..mapStartIndex+numberOfLumpsInMap]
   let things = Assets.Thing.load SkillLevel.Nightmare wad (mapLumps |> Array.find(fun m -> m.Name = "THINGS"))
-  ()
+  let map = Assets.Map.loadMap wad mapLumps
+  
+  { Episode = episode
+    MapNumber = level
+    Things = things
+    Map = map
+  }

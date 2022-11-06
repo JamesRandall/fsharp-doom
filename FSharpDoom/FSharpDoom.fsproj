@@ -33,6 +33,7 @@
         <Compile Include="Assets\MapPosition.fs" />
         <Compile Include="Assets\Lump.fs" />
         <Compile Include="Assets\Thing.fs" />
+        <Compile Include="Assets\Map.fs" />
         <Compile Include="Assets\Loader.fs" />
         <Compile Include="RenderTest.fs" />
         <Compile Include="Program.fs" />

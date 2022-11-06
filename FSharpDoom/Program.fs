@@ -33,7 +33,7 @@ let load (window:IWindow) _ =
   let gl = Silk.NET.OpenGL.GL.GetApi(window)
   
   let testSprite = Assets.Loader.load ()
-  let map = Assets.Loader.loadMap 1 1
+  let map = Assets.Loader.loadLevel 1 1
   renderDataOption <- Some
     { Gl = gl
       ScreenImage = Image.Create Constants.viewportWidth Constants.viewportHeight

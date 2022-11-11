@@ -35,6 +35,7 @@
         <Compile Include="Assets\Thing.fs" />
         <Compile Include="Assets\Map.fs" />
         <Compile Include="Assets\Loader.fs" />
+        <Compile Include="Renderer\Map.fs" />
         <Compile Include="RenderTest.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>

@@ -19,6 +19,13 @@ let create (gl:GL) (vertexBufferObject:BufferObject.BufferObject) elementBufferO
   BufferObject.bind elementBufferObject
   vertexArrayObject
   
+let createWithoutIndices (gl:GL) (vertexBufferObject:BufferObject.BufferObject) =
+  let vertexArrayObject = { Gl = gl ; Handle = gl.GenVertexArray() ; VertexSize = vertexBufferObject.Size }
+  bind vertexArrayObject
+  BufferObject.bind vertexBufferObject
+  vertexArrayObject
+
+  
 let vertexAttributePointer vertexArrayObject index count (pointerType:VertexAttribPointerType) vertexSize offset =
   vertexArrayObject.Gl.VertexAttribPointer (
     index,

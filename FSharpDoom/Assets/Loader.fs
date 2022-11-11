@@ -1,5 +1,7 @@
 module Assets.Loader
 open Assets.Lump
+open Assets.MapPosition
+open Assets.Thing
 open Constants
 open FSharpDoom.OpenGl.Rgba
 
@@ -21,6 +23,7 @@ type Level =
     MapNumber: int
     Things: Assets.Thing.Thing array
     Map: Assets.Map.Map
+    PlayerStart: MapPosition
   }
 
 let loadPalettes (wad:byte array) lump =
@@ -132,9 +135,11 @@ let loadLevel episode level =
   let mapLumps = lumps[mapStartIndex+1..mapStartIndex+numberOfLumpsInMap]
   let things = Assets.Thing.load SkillLevel.Nightmare wad (mapLumps |> Array.find(fun m -> m.Name = "THINGS"))
   let map = Assets.Map.loadMap wad mapLumps
+  let playerStart = things |> Seq.find(function  | t when t.Definition.Type = ThingType.Player1Start -> true | _ -> false)
   
   { Episode = episode
     MapNumber = level
     Things = things
     Map = map
+    PlayerStart = playerStart.Position
   }

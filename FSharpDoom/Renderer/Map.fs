@@ -4,6 +4,7 @@ open FSharpDoom.OpenGl.Rgba
 
 // Bresenham line
 // https://en.wikipedia.org/wiki/Bresenham's_line_algorithm
+// TODO: Doesn't currently check we are in the bounds of the buffer
 let line (buffer:nativeptr<Rgba>) bufferWidth color x1 y1 x2 y2 =
   let w = x2-x1
   let h = y2-y1

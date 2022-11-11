@@ -1,12 +1,10 @@
 module Renderer.Map
-open System.Numerics
 open Microsoft.FSharp.NativeInterop
-open OpenGl
-open Silk.NET.OpenGL
 open FSharpDoom.OpenGl.Rgba
 
 // Bresenham line
-let line (buffer:nativeptr<FSharpDoom.OpenGl.Rgba.Rgba>) bufferWidth bufferHeight color x1 y1 x2 y2 =
+// https://en.wikipedia.org/wiki/Bresenham's_line_algorithm
+let line (buffer:nativeptr<Rgba>) bufferWidth color x1 y1 x2 y2 =
   let w = x2-x1
   let h = y2-y1
   let absWidth = abs w
@@ -26,7 +24,7 @@ let line (buffer:nativeptr<FSharpDoom.OpenGl.Rgba.Rgba>) bufferWidth bufferHeigh
   let longest,shortest = if absWidth > absHeight then absWidth,absHeight else absHeight,absWidth
   
   {0..longest}
-  |> Seq.fold(fun (x,y,numerator) i ->
+  |> Seq.fold(fun (x,y,numerator) _ ->
       NativePtr.set buffer (y*bufferWidth+x) color
       let newNumerator = numerator + shortest
       if not (numerator < longest) then
@@ -51,15 +49,15 @@ let render (screen:FSharpDoom.Image.Image) (level:Assets.Loader.Level) =
         min left minX,
         min top minY,
         max right maxX,
-        max right maxY
+        max bottom maxY
       )
     ) (System.Int32.MaxValue, System.Int32.MaxValue, System.Int32.MinValue, System.Int32.MinValue)
   let width = right - left
   let height = bottom - top
-  let scale = max (float screen.Width / float width) (float screen.Height / float height)
+  let scale = min (float (screen.Width-2) / float width) (float (screen.Height-2) / float height)
   
   use screenPtr = fixed screen.Data
-  let drawLine = line screenPtr screen.Width screen.Height
+  let drawLine = line screenPtr screen.Width
   
   let lineDefColor = { R = 255uy ; G = 255uy ; B = 255uy ; A = 255uy }
   let playerColor = { R = 255uy ; G = 0uy ; B = 0uy ; A = 255uy }

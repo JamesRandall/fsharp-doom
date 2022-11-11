@@ -4,6 +4,7 @@ open FSharpDoom.OpenGl.Rgba
 
 // Bresenham line
 // https://en.wikipedia.org/wiki/Bresenham's_line_algorithm
+// I thought about using the Wu algorithm but anti aliasing just doesn't feel very 1993 
 // TODO: Doesn't currently check we are in the bounds of the buffer
 let line (buffer:nativeptr<Rgba>) bufferWidth color x1 y1 x2 y2 =
   let w = x2-x1
@@ -13,12 +14,12 @@ let line (buffer:nativeptr<Rgba>) bufferWidth color x1 y1 x2 y2 =
   let dx1 = if w < 0 then -1 elif w > 0 then 1 else 0
   let dy1 = if h < 0 then -1 elif h > 0 then 1 else 0
   let dx2 =
-    if not (absWidth > absHeight) then
+    if absWidth <= absHeight then
       0
     else
       if w < 0 then -1 elif w > 0 then 1 else 0
   let dy2 =
-    if not (absWidth > absHeight) then
+    if absWidth <= absHeight then
       if h < 0 then -1 elif h > 0 then 1 else 0
     else
       0        
